@@ -1,6 +1,5 @@
-# netbot-webapp
-
-> Web application for B-YSE Netbot.
+# Priceringo
+> Web application to get best price between Didi and Uber.
 
 ## Build Setup
 
