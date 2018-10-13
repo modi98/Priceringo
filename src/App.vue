@@ -87,29 +87,9 @@
         ></v-text-field>
         <v-spacer></v-spacer>
       </v-toolbar>
-      <v-layout class="text-xs-center">
-        <v-flex xs2></v-flex>
-        <v-flex xs8 pt-5>
-          <v-card raised>
-            <v-toolbar dark color="red darken-3">
-              <v-toolbar-title>Get the best price!</v-toolbar-title>
-            </v-toolbar>
-            <v-card-text>
-              <v-text-field
-                label="Your location"
-                v-model="yourLocation"
-                required :rules="[() => yourLocation.length > 0 || 'Insert a valid location.']"
-              ></v-text-field>
-              <v-text-field
-                label="Desired locaiton"
-                v-model="desiredLocation"
-                required :rules="[() => desiredLocation.length > 0 || 'Insert a valid location.']"
-              ></v-text-field>
-            </v-card-text>
-            <v-btn dark color="red darken-3" @click="calculate">Calculate</v-btn>
-          </v-card>
-        </v-flex>
-      </v-layout>
+    </v-content>
+    <v-content dark>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
@@ -117,8 +97,10 @@
 <script>
 export default {
   data: () => ({
-    dialog: false,
+    dialogErrorPrice: false,
+    dialogPrice: false,
     drawer: null,
+    locationForm: false,
     yourLocation: '',
     desiredLocation: '',
     items: [
@@ -129,10 +111,10 @@ export default {
   }),
   methods: {
     calculate () {
-      console.log('Your location: ' + this.yourLocation)
-      console.log('Desired location: ' + this.desiredLocation)
-      this.yourLocation = ''
-      this.desiredLocation = ''
+      this.dialogPrice = true
+    },
+    restart () {
+      this.dialogPrice = false
     }
   },
   props: {
