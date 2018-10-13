@@ -68,7 +68,7 @@
     <v-content>
       <v-toolbar
         :clipped-left="$vuetify.breakpoint.lgAndUp"
-        color="blue darken-3"
+        color="red darken-3"
         dark
         app
         fixed
@@ -88,10 +88,10 @@
         <v-spacer></v-spacer>
       </v-toolbar>
       <v-layout class="text-xs-center">
-        <v-flex xs3></v-flex>
-        <v-flex xs6 pt-5>
-          <v-card>
-            <v-toolbar dark color="blue">
+        <v-flex xs2></v-flex>
+        <v-flex xs8 pt-5>
+          <v-card raised>
+            <v-toolbar dark color="red darken-3">
               <v-toolbar-title>Get the best price!</v-toolbar-title>
             </v-toolbar>
             <v-card-text>
@@ -106,7 +106,7 @@
                 required :rules="[() => desiredLocation.length > 0 || 'Insert a valid location.']"
               ></v-text-field>
             </v-card-text>
-            <v-btn dark color="blue" @click="calculate">Calculate</v-btn>
+            <v-btn dark color="red darken-3" @click="calculate">Calculate</v-btn>
           </v-card>
         </v-flex>
       </v-layout>
