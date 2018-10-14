@@ -1,8 +1,8 @@
 {
-  "name": "netbot-webapp",
+  "name": "Priceringo",
   "version": "1.0.0",
-  "description": "Web application for B-YSE Netbot.",
-  "author": "Angel Figueroa <angelfiguex@gmail.com>",
+  "description": "Get the best price for your taxi",
+  "author": "Mauricio Alvarado <mauricio.alvaradoh98@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
